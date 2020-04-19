@@ -4,7 +4,7 @@
 
 - ViewController 다루기 - 데이터 전송, Segue, Present 등 </br>
 
-> [✏️ 1st Seminar >>](./links/1stseminar.md) </br>
+> [✏️ 1st Seminar >>](./Links/1stSeminar.md) </br>
 
-> </br>
-> </br>
+ </br>
+ 🔴🟣🔵⚪️🟢⚫️
