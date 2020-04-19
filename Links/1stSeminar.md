@@ -71,6 +71,7 @@ dismiss(animated: true) {
 ```
 
 <center>
-<img src="./ScreenShots/스크린샷 2020-04-19 오후 4.28.48.png" width="180" height="300">
+
+<img src = "~/Screenshots/스크린샷 2020-04-19 오후 4.28.48.png" height="300" width="180">
 
 </center>
