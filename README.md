@@ -1,8 +1,11 @@
-## 🎉26th iOS 🎉
+# 🎉 26th iOS 🎉
 
 ---
 
-- ## 1주차 주제
+## 🟢 1주차 주제
 
-1. ViewController 다루기 - 데이터 전송, Segue, Present </br>
-   [1주차 링크][./links/1stseminar.md]
+- ViewController 다루기 - 데이터 전송, Segue, Present 등 </br>
+
+> [✏️ 1st Seminar >>](./links/1stseminar) </br>
+
+</br>
