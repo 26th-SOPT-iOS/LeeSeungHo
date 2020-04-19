@@ -72,6 +72,6 @@ dismiss(animated: true) {
 
 <center>
 
-<img src="./Screenshots/1stVC.png" width="50%" height="50%"> <img src="/LeeSeungHo/Screenshots/스크린샷 2020-04-20 오전 12.55.08" height="300" width="180">
+<img src="./Screenshots/1stVC.png" width="50%" height="50%"><img src="./Screenshots/3rdVC.png"  width="50%" height="50%" >
 
 </center>
