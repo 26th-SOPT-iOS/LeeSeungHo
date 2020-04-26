@@ -1,3 +1,5 @@
+# LeeSeungho 🎉
+
 ## 🟢 1차 세미나 🟢
 
 - VC (ViewController)간 데이터 전송하기
