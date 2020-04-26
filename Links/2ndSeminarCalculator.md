@@ -10,7 +10,8 @@
 
 ### 1. StackView 구조 만들기
 
-전체적인 StackView 구조를 먼저 만들어야 합니다. 저같은 경우는 View를 7등분해서 </br>
+전체적인 StackView 구조를 먼저 만들어야 합니다. 전체 View Size를 7등분하여 사용하였습니다.
+</br>
 
 1 - 빈 StackView</br>
 2 - UILabel StackView</br>
@@ -20,7 +21,7 @@
 6 - Button</br>
 7 - Button</br>
 
-1부터 7까지는 Horizontal Stack View, 이들를 감싸는 가장 큰 Vertical StackView 1개로
+1부터 7은 Horizontal Stack View, 그리고 이들을 감싸는 가장 큰 Vertical StackView 1개로
 구성하였습니다. </br>
 
 - Horizontal StackView </br>
@@ -34,12 +35,11 @@
 
 ### 2. 버튼 모양 세팅하기
 
-> Button이 여러개일 때는 Outlet Collections를 사용하는것이 좋습니다. </br>
-> 실행 방법은 다음과 같습니다.
+Button이 여러개일 때는 Outlet Collections를 사용하는것이 좋습니다. </br>
+실행 방법은 다음과 같습니다.
 
 <center>
-<img src="../Screenshots/connections.png" width="30%" height="30%" >
-<img src="../Screenshots/outletcollections.png" width="30%" height="30%"> 
+<img src="../Screenshots/connections.png" width="30%" height="30%"><img src="../Screenshots/outletcollections.png" width="30%" height="30%"> 
 </center>
 </br>
 button의 Outlet을 설정해준 뒤에는 버튼의 모양을 설정해주어야 합니다.</br>
