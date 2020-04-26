@@ -2,7 +2,7 @@
 
 - 실행 gif
 
-<img src="../Screenshots/videos.gif" width="50%" height="50%">
+<img src="../Screenshots/videos.gif" width="30%" height="30%">
 
 ---
 
@@ -38,8 +38,8 @@
 > 실행 방법은 다음과 같습니다.
 
 <center>
-<img src="../Screenshots/connections.png" width="100%" height="100%" >
-<img src="../Screenshots/outletcollections.png" width="100%" height="100%"> 
+<img src="../Screenshots/connections.png" width="30%" height="30%" >
+<img src="../Screenshots/outletcollections.png" width="30%" height="30%"> 
 </center>
 </br>
 button의 Outlet을 설정해준 뒤에는 버튼의 모양을 설정해주어야 합니다.</br>
@@ -84,7 +84,7 @@ func setButtonLooksLike() {
 
 이는 Constraint에서 Relation의 특성을 보아야 합니다.
 
-<img src="../Screenshots/constraintrelation.png" width="100%" height="100%">
+<img src="../Screenshots/constraintrelation.png" width="30%" height="30%">
 
 왼쪽 Constraint의 숫자는 점점 작아져야 하므로, </br>
 Less Than or Equal으로 설정하면 Constraint 값보다 유동적으로 작아지게 됩니다.
@@ -100,5 +100,5 @@ Less Than or Equal으로 설정하면 Constraint 값보다 유동적으로 작�
         NSLayoutConstraint.activate(constraints)
 ```
 
-> 감사합니다~! 😊 </br>
+> 이상입니다. 감사합니다~! 😊 </br>
 > 계산기 로직은 필요하신 경우 클론해서 쓰세요!
