@@ -1,4 +1,4 @@
-# 🎉 26th iOS 🎉
+# 🎉 26th iOS Seminar 🎉
 
 ## 🟢 1주차 주제
 
@@ -6,5 +6,13 @@
 
 > [✏️ 1st Seminar >>](./Links/1stSeminar.md) </br>
 
+</br>
+
+## 🟢 2주차 주제
+
+- AutoLayout, StackView, ScrollView </br>
+  중요도 : ⭐️⭐️⭐️⭐️⭐️
+
+> [✏️ 2nd Seminar >>](./Links/2ndSeminarCalculator.md) </br>
+
  </br>
- 🔴🟣🔵⚪️🟢⚫️
