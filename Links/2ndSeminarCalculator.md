@@ -73,8 +73,8 @@ extension MainHomeVC: UIScrollViewDelegate {
 
 > (1) `func scrollViewDidScroll(_ scrollView: UIScrollView)` : </br>
 > Scroll이 시작될 때 호출되는 함수입니다. 매 스크롤마다 호출됩니다. </br></br>
-> (2) `scrollView.contentOffset.y` : </br> > <img src="../Screenshots/contentOffset.png" height="50%" width="50%"> </br>
-> 그림에서 오른쪽 스크롤이라고 생각하면 좋습니다. 스크롤을 내릴수록 +, 올릴수록 -의 값을 리턴합니다.
+> (2) `scrollView.contentOffset.y` : </br> > <img src="../Screenshots/contentOffset.png" height="10%" width="10%"> </br>
+> 그림에서 회색 스크롤이라고 생각하면 좋습니다. 스크롤을 내릴수록 +, 올릴수록 -의 값을 리턴합니다.
 
 따라서, `contentOffset`이 음수일 경우는 이미지의 사이즈를 크게, </br>
 `contentOffset`이 양수일때는 이미지의 사이즈를 작게 해 주어야 합니다.
