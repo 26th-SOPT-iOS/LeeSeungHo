@@ -13,7 +13,7 @@ ScrollView + StackView 구조입니다. </br>
 **_Tips : `ScrollView`는 AutoLayout이 까다롭습니다. </br>
 `StackView`를 이용하면 오토레이아웃에 도움을 받을 수 있습니다._**
 
-### ** ✏️도전 과제 ✏️**
+### **✏️도전 과제 ✏️**
 
 - Tips(1) : 스토리보드로도 (제한적으로) 구현할 수 있습니다!</br>
   Header Image의 *Top Constraint*를 최상위 View에 걸어야 합니다.
