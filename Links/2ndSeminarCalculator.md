@@ -1,12 +1,91 @@
-# 2주차 세미나 🎉
+## 🟢 2차 과제 - ScrollView 그리기 + 도전과제 🟢
+
+- 실행 gif
+
+<img src="../Screenshots/gif.gif" width="30%" height="30%">
+
+ScrollView + StackView 구조입니다. </br>
+
+<img src="../Screenshots/hirachy.png" height="30%" width="30%"> </br>
+
+**_Tips : `ScrollView`는 AutoLayout이 까다롭습니다. </br>
+`StackView`를 이용하면 오토레이아웃에 도움을 받을 수 있습니다._**
+
+### **도전 과제**
+
+- Tips(1) : 스토리보드로도 (제한적으로) 구현할 수 있습니다!</br>
+  Header Image의 *Top Constraint*를 최상위 View에 걸어야 합니다.
+  </br>
+
+  > https://codentrick.com/parallax-effect-for-ios-with-swift-part-2/ </br>
+
+- Tips(2) : NavigationBar와 View 영역의 구분을 없애는 방법
+
+사진과 같이 `NavigationBar` 영역과 `View` 영역의 구분을 없앨 수 있습니다.
+<img src="../Screenshots/transparentNavi.png" height="30%" width="30%"> </br>
+
+코드는 다음과 같습니다.
+
+```swift
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+
+        navigationBar.isTranslucent = false
+        navigationBar.backgroundColor = UIColor.clear
+        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationBar.shadowImage = UIImage()
+```
+
+`ViewDidLoad()`에 적용시켜 줍니다.
+
+### ✏️ 구현 방법 : `Scrollview Delegate`를 이용해서 Header Image의 Height를 수정하기
+
+1. Outlet으로 ScrollView를 선언합니다.
+2. `ViewDidLoad()`에 해당 코드 두줄을 선언합니다.
+
+```swift
+override func viewDidLoad() {
+        super.viewDidLoad()
+
+        mainScrollView.delegate = self
+        mainScrollView.contentInsetAdjustmentBehavior = .never
+    }
+```
+
+(1) delegate : 다른 객체의 행동에 변화를 줄 수 있는 개체. </br> 코드로 ScrollView를 수정해 줄 것이므로 delegate 선언을 해 줍니다.</br>
+(2) ScrollView 내부의 ContentArea를 자동으로 수정해주는 속성입니다. 디폴트는 `.Automatic`이지만, 코드로 레이아웃을 수정해야 할 때는 해당 속성을 `.never`로 변경해주어야 합니다.
+</br>
+
+```swift
+extension MainHomeVC: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+        if scrollView.contentOffset.y < 0 {
+            headerImageHeightConstraint.constant =
+                originHeaderImageHeight - scrollView.contentOffset.y
+        } else {
+            var height = originHeaderImageHeight - scrollView.contentOffset.y
+            height = height > minimunImageHeight ? height : minimunImageHeight
+            headerImageHeightConstraint.constant = height
+        }
+    }
+}
+```
+
+> (1) `func scrollViewDidScroll(_ scrollView: UIScrollView)` : </br>
+> Scroll이 시작될 때 호출되는 함수입니다. 매 스크롤마다 호출됩니다. </br></br>
+> (2) `scrollView.contentOffset.y` : </br> > <img src="../Screenshots/contentOffset.png" height="50%" width="50%"> </br>
+> 그림에서 오른쪽 스크롤이라고 생각하면 좋습니다. 스크롤을 내릴수록 +, 올릴수록 -의 값을 리턴합니다.
+
+따라서, `contentOffset`이 음수일 경우는 이미지의 사이즈를 크게, </br>
+`contentOffset`이 양수일때는 이미지의 사이즈를 작게 해 주어야 합니다.
+
+---
+
+## 🟢 2차 추가 과제 - 계산기 🟢
 
 - 실행 gif
 
 <img src="../Screenshots/videos.gif" width="30%" height="30%">
-
----
-
-## 🟢 2차 과제 - 계산기 🟢
 
 ### 1. StackView 구조 만들기
 
