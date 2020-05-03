@@ -22,7 +22,7 @@ ScrollView + StackView 구조입니다. </br>
 - Tips(2) : NavigationBar와 View 영역의 구분을 없애는 방법
 
 사진과 같이 `NavigationBar` 영역과 `View` 영역의 구분을 없앨 수 있습니다.
-<img src="../Screenshots/transparentNavi.png" height="30%" width="30%"> </br>
+<img src="../Screenshots/transparentNavi.png" height="50%" width="50%"> </br>
 
 코드는 다음과 같습니다.
 
@@ -73,7 +73,7 @@ extension MainHomeVC: UIScrollViewDelegate {
 
 > (1) `func scrollViewDidScroll(_ scrollView: UIScrollView)` : </br>
 > Scroll이 시작될 때 호출되는 함수입니다. 매 스크롤마다 호출됩니다. </br></br>
-> (2) `scrollView.contentOffset.y` : </br> > <img src="../Screenshots/contentOffset.png" height="10%" width="10%"> </br>
+> (2) `scrollView.contentOffset.y` : </br> > <img src="../Screenshots/contentOffset.png" height="5%" width="10%"> </br>
 > 그림에서 회색 스크롤이라고 생각하면 좋습니다. 스크롤을 내릴수록 +, 올릴수록 -의 값을 리턴합니다.
 
 따라서, `contentOffset`이 음수일 경우는 이미지의 사이즈를 크게, </br>
