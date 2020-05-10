@@ -23,9 +23,17 @@ class CalculatorVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//
+//        setButtonLooksLike()
+//        setDisplayConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         setButtonLooksLike()
-        setDisplayConstraints() 
+        setDisplayConstraints()
+
     }
     //MARK:- UI Logic
     func setDisplayConstraints() {
@@ -50,11 +58,11 @@ class CalculatorVC: UIViewController {
         view.backgroundColor = .black
         
         for i in 0..<yellowOperations.count {
-            let bt: UIButton = {
+            let _: UIButton = {
                 let btn = yellowOperations[i]
                 btn.titleLabel?.font = UIFont.systemFont(ofSize: 40)
                 btn.setTitleColor(.white, for: .normal)
-                btn.layer.cornerRadius = btn.frame.height/2
+                btn.layer.cornerRadius = btn.frame.height/2 - 4
                 btn.layer.borderWidth = 1
                 btn.layer.borderColor = UIColor.clear.cgColor
                 btn.clipsToBounds = true
@@ -65,11 +73,11 @@ class CalculatorVC: UIViewController {
         }
         
         for i in 0..<grayOperations.count {
-            let bt: UIButton = {
+            let _: UIButton = {
                 let btn = grayOperations[i]
                 btn.titleLabel?.font = UIFont.systemFont(ofSize: 30)
                 btn.setTitleColor(.black, for: .normal)
-                btn.layer.cornerRadius = btn.frame.height/2
+                btn.layer.cornerRadius = btn.frame.height/2	- 4
                 btn.layer.borderWidth = 1
                 btn.layer.borderColor = UIColor.clear.cgColor
                 btn.clipsToBounds = true
@@ -80,11 +88,11 @@ class CalculatorVC: UIViewController {
         }
         
         for i in 0..<darkGrayNums.count {
-            let bt: UIButton = {
+            let _: UIButton = {
                 let btn = darkGrayNums[i]
                 btn.titleLabel?.font = UIFont.systemFont(ofSize: 35, weight: .regular)
                 btn.setTitleColor(.white, for: .normal)
-                btn.layer.cornerRadius = btn.frame.height/2
+                btn.layer.cornerRadius = btn.frame.height/2 - 4
                 btn.layer.borderWidth = 1
                 btn.layer.borderColor = UIColor.clear.cgColor
                 btn.clipsToBounds = true
