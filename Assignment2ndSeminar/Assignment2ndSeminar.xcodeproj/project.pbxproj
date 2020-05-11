@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3D80B6022468003100FEBA59 /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B6012468003100FEBA59 /* FriendVC.swift */; };
-		3D80B6042468025100FEBA59 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B6032468025100FEBA59 /* FriendCell.swift */; };
 		3D80B6062468028400FEBA59 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B6052468028400FEBA59 /* Friends.swift */; };
-		3D80B608246816EE00FEBA59 /* MyProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B607246816EE00FEBA59 /* MyProfileCell.swift */; };
+		3D80B608246816EE00FEBA59 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B607246816EE00FEBA59 /* ProfileCell.swift */; };
 		3D9DBA2024548876003651DD /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9DBA1F24548876003651DD /* Extensions+UIColor.swift */; };
 		3D9DBA222454ADEF003651DD /* Extensions+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9DBA212454ADEF003651DD /* Extensions+Formatter.swift */; };
 		3DADCF512455E62100B96DE1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADCF502455E62100B96DE1 /* LoginVC.swift */; };
@@ -27,9 +26,8 @@
 
 /* Begin PBXFileReference section */
 		3D80B6012468003100FEBA59 /* FriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
-		3D80B6032468025100FEBA59 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		3D80B6052468028400FEBA59 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
-		3D80B607246816EE00FEBA59 /* MyProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileCell.swift; sourceTree = "<group>"; };
+		3D80B607246816EE00FEBA59 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		3D9DBA1F24548876003651DD /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 		3D9DBA212454ADEF003651DD /* Extensions+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Formatter.swift"; sourceTree = "<group>"; };
 		3DADCF502455E62100B96DE1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -154,8 +152,7 @@
 		3DE2EC7924546AD4002F629B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3D80B6032468025100FEBA59 /* FriendCell.swift */,
-				3D80B607246816EE00FEBA59 /* MyProfileCell.swift */,
+				3D80B607246816EE00FEBA59 /* ProfileCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -240,11 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D80B6042468025100FEBA59 /* FriendCell.swift in Sources */,
 				3DADCF532455E63200B96DE1 /* SignUpVC.swift in Sources */,
 				3DE2EC6524546A90002F629B /* CalculatorVC.swift in Sources */,
 				3DE2EC6124546A90002F629B /* AppDelegate.swift in Sources */,
-				3D80B608246816EE00FEBA59 /* MyProfileCell.swift in Sources */,
+				3D80B608246816EE00FEBA59 /* ProfileCell.swift in Sources */,
 				3DADCF512455E62100B96DE1 /* LoginVC.swift in Sources */,
 				3DE2EC7D24546CEB002F629B /* CalculateBrain.swift in Sources */,
 				3DE2EC6324546A90002F629B /* SceneDelegate.swift in Sources */,

@@ -60,6 +60,7 @@ extension MainHomeVC: UIScrollViewDelegate {
         } else {
             var height = originHeaderImageHeight - scrollView.contentOffset.y
             height = height > minimunImageHeight ? height : minimunImageHeight
+            headerImageHeightConstraint.constant = height
         }
     }
 }

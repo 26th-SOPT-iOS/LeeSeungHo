@@ -6,17 +6,17 @@
 //  Copyright © 2020 elesahich. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct Friend {
+struct Friends {
     
     var name: String
-    var profileImage: String
+    var profileImage: UIImage?
     var subTitle: String
     
     init(name: String, profileImage: String, subTitle: String) {
         self.name = name
-        self.profileImage = profileImage
+        self.profileImage = UIImage(named: profileImage)
         self.subTitle = subTitle
     }
 }
