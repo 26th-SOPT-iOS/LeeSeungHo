@@ -4,7 +4,7 @@
 
 실행 gif, main Home
 
-<img src="../Screenshots/tableView.gif" width="50%" height="50%"><img src="../Screenshots/friends.png" width="50%" height="50%"> </br>
+<img src="../Screenshots/tableView.gif" width="40%" height="40%"><img src="../Screenshots/friends.png" width="50%" height="50%"> </br>
 
 - 1. NavigationBar 영역 </br>
 - 2. TableView 영역 - tableView는 MyProfile과 Friends로 구성됩니다.
@@ -15,12 +15,10 @@
 
 #### **잠시 복습하는 TableView의 구조**
 
-<img src="../Screenshots/stackViewStructure.png" width="50%" height="50%"> </br>
-주목할 포인트는 다음과 같습니다.
-⭕️`indexPath.section()`과 `indexPath.row()`의 차이
+<img src="../Screenshots/stackViewStructure.png" width="30%" height="30%"> </br>
+주목할 포인트는 다음과 같습니다. </br>
+⭕️`indexPath.section()`과 `indexPath.row()`의 차이 </br>
 ⭕️`HeaderView()`와 `FooterView()`의 위치
-
-</br>
 
 ## **✏️ 3차 과제 ✏️**
 
@@ -68,11 +66,10 @@ func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) ->
 위와 같이 `heightForRowAt`을 리턴해주는 함수를 선언해서 사용합니다. <br><br>
 
 > **⭕️ Tips**<br>
-> Q. tableView의 Delegate, Datasource에는 어떤 것이 있는지 어떻게 알아서 쓰느냐?
-> A. 기본적으로 많이 해보는 방법이 필요합니다. 다만, 필요한 함수 대부분은 Delegate와 DataSource에 정의가 되어 있다는것을 기억하셔야 합니다. 찾아서 써야 해요!<br>
-> A. 자동완성을 적극적으로 활용합시다! `func table~` 정도만 타아핑 한 후 원하는 함수를 검색할 수 있습니다!
-> 키워드를 생각하며 자동완성 예 :
-> <img src="../Screenshots/AutomaticCompletion.gif" width="50%" height="50%"> <br>
+> Q. tableView의 Delegate, Datasource에는 어떤 것이 있는지 어떻게 알아서 쓰느냐? <br>
+> A. 기본적으로 많이 해보는 방법이 필요합니다. 다만, 필요한 함수 대부분은 Delegate와 DataSource에 정의가 되어 있다는것을 기억하셔야 합니다. 찾아서 써야 해요!<br><br>
+> A. 자동완성을 적극적으로 활용합시다! `func table~` 정도만 타아핑 한 후 원하는 함수를 검색할 수 있습니다! <br>
+> 키워드를 생각하며 자동완성 예 : </br> > <img src="../Screenshots/AutomaticCompletion.gif" width="50%" height="50%"> <br>
 > 또한 애플 공식문서 > https://developer.apple.com/documentation 에 상세히 기재되어 있습니다! 파파고와 함께 하세요~!
 
 ### - 2. tableView Header를 사용해 보았습니다.
