@@ -24,7 +24,7 @@
 
 ### - 1. tableView의 Section은 2개입니다. </br>
 
-1 - My Profile, 2 - Friends Profile
+1 - My Profile, 2 - Friends Profile <br>
 `TableViewCell()`을 2개를 사용해도 좋지만, Myfrofile과 FriendsProfile의 형태가 유사하므로 재활용하여 사용했습니다. <br><br>
 
 방법은 다음과 같았습니다.
@@ -69,7 +69,7 @@ func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) ->
 > Q. tableView의 Delegate, Datasource에는 어떤 것이 있는지 어떻게 알아서 쓰느냐? <br>
 > A. 기본적으로 많이 해보는 방법이 필요합니다. 다만, 필요한 함수 대부분은 Delegate와 DataSource에 정의가 되어 있다는것을 기억하셔야 합니다. 찾아서 써야 해요!<br><br>
 > A. 자동완성을 적극적으로 활용합시다! `func table~` 정도만 타아핑 한 후 원하는 함수를 검색할 수 있습니다! <br>
-> 키워드를 생각하며 자동완성 예 : </br> > <img src="../Screenshots/AutomaticCompletion.gif" width="50%" height="50%"> <br>
+> 키워드를 생각하며 자동완성 예 : </br> > <img src="../Screenshots/AutomaticCompletion.gif" width="100%" height="100%"> <br>
 > 또한 애플 공식문서 > https://developer.apple.com/documentation 에 상세히 기재되어 있습니다! 파파고와 함께 하세요~!
 
 ### - 2. tableView Header를 사용해 보았습니다.
