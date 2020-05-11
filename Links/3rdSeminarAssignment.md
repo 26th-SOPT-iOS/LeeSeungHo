@@ -4,13 +4,13 @@
 
 실행 gif, main Home
 
-<img src="../Screenshots/stackView.gif" width="50%" height="50%"><img src="../Screenshots/friends.png" width="50%" height="50%"> </br>
+<img src="../Screenshots/tableView.gif" width="50%" height="50%"><img src="../Screenshots/friends.png" width="50%" height="50%"> </br>
 
 - 1. NavigationBar 영역 </br>
 - 2. TableView 영역 - tableView는 MyProfile과 Friends로 구성됩니다.
 - 3. TableView의 Header 영역을 사용해서 `친구 *명`을 표시할 것입니다.
 
-스토리보드의 구조는 다음과 같습니다.
+스토리보드의 구조는 다음과 같습니다. </br>
 <img src="../Screenshots/structure.png" width="50%" height="50%"> </br></br>
 
 #### **잠시 복습하는 TableView의 구조**
