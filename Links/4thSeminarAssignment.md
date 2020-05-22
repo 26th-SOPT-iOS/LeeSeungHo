@@ -11,7 +11,7 @@
 
 ## ✏️자동 로그인 설정✏️
 
-### 1. 로그인 성공 시, UserDefault로 저장할 객체는 Id, PassWord, Token입니다.
+### 로그인 성공 시, UserDefault로 저장할 객체는 Id, PassWord, Token입니다.
 
 #### ⭕️ 1. UserDefault
 
