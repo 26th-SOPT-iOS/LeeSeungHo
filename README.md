@@ -25,3 +25,12 @@
 > [✏️ 3nd Seminar >>](./Links/3rdSeminarAssignment.md) </br>
 
  </br>
+
+## 🟢 4주차 주제
+
+- 서버 통신, `Alamofire`, `CocoaPods` </br>
+  중요도 : ⭐️⭐️⭐️⭐️⭐️ - ~~자꾸 별 다섯개만 나오는 것 같아요~~
+
+> [✏️ 4th Seminar >>](./Links/4thSeminarAssignment.md) </br>
+
+ </br>
