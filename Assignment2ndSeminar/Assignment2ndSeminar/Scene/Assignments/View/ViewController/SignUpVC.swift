@@ -12,26 +12,50 @@ class SignUpVC: UIViewController {
     
     @IBOutlet var txtFields: [UITextField]!
     @IBOutlet weak var signUpButton: UIButton!
+    var loginDelegate: signUpAndAutoLoginDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        layerSettins()
+        layerSettings()
         setNavigationBarLooksLike()
-        
     }
-    @IBAction func sendNextVC(_ sender: Any) {
+    
+    @IBAction func signUpComplete (_ button: UIButton) {
         
-        guard let vc = storyboard?.instantiateViewController(identifier: "TabbarController") else { return }
+        guard let id = txtFields[0].text else { return }
+        guard let pwd = txtFields[1].text else { return }
+        guard let name = txtFields[2].text else { return }
+        guard let email = txtFields[3].text else { return }
+        guard let phone = txtFields[4].text else { return }
         
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
-        
+        SignUpService.signupservice.signUp(id: id, pwd: pwd, name: name, email: email, phone: phone) { networkResult in
+            
+            switch networkResult {
+            case .success:
+                NotificationCenter.default.post(name: NSNotification.Name("completeSignUp"), object: nil, userInfo: ["id": id, "pwd": pwd])
+                print("\(id)")
+                self.navigationController?.popViewController(animated: true)
+                self.loginDelegate?.autoButtonClick(id, pwd)
+    
+            case .requestErr(let message):
+                guard let message = message as? String else { return }
+                let alertController = UIAlertController(title: "회원가입 실패", message: message, preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertController.addAction(alertAction)
+                self.present(alertController, animated: true, completion: nil)
+                
+            case .pathErr: print("")
+            case .serverErr: print("")
+            case .networkFail: print("")
+            }
+            
+        }
     }
     
     //MARK:- UI Logic
     
-    func layerSettins() {
+    func layerSettings() {
         
         for i in 0..<txtFields.count {
             txtFields[i].backgroundColor = UIColor.calculatorColor(.signUpAndInColor)
@@ -39,9 +63,15 @@ class SignUpVC: UIViewController {
             txtFields[i].layer.borderWidth = 1
             txtFields[i].layer.borderColor = UIColor.white.cgColor
             txtFields[i].clipsToBounds = true
-            txtFields[0].placeholder = "  이름"
-            txtFields[1].placeholder = "  이메일"
-            txtFields[2].placeholder = "  비밀번호"
+            txtFields[i].setLeftPaddingPoints(10)
+            
+            txtFields[0].placeholder = "아이디"
+            txtFields[1].placeholder = "비밀번호"
+            txtFields[2].placeholder = "이름"
+            txtFields[3].placeholder = "이메일"
+            txtFields[4].placeholder = "핸드폰 번호"
+            
+            
         }
         signUpButton.layer.cornerRadius = 20
         signUpButton.layer.borderWidth = 1
@@ -64,12 +94,11 @@ class SignUpVC: UIViewController {
         navigationBar.backgroundColor = UIColor.clear
         navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationBar.shadowImage = UIImage()
-        
         navigationItem.leftBarButtonItem = backIndicator
-        
     }
     
     @objc func dismissVC() {
         self.navigationController?.popViewController(animated: true)
     }
 }
+

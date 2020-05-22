@@ -25,17 +25,14 @@ class MainHomeVC: UIViewController {
         
         mainScrollView.delegate = self
         mainScrollView.contentInsetAdjustmentBehavior = .never
-        
         setImagesLooksLike()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
     }
     
     func setImagesLooksLike() {
-        
         for i in 0..<images.count {
             let _: UIImageView = {
                 let img = images[i]
@@ -50,10 +47,8 @@ class MainHomeVC: UIViewController {
     }
 }
 
-
 extension MainHomeVC: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
         if scrollView.contentOffset.y < 0 {
             headerImageHeightConstraint.constant =
                 originHeaderImageHeight - scrollView.contentOffset.y

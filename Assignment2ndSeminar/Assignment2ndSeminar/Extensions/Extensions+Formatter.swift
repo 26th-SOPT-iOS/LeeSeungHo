@@ -23,11 +23,3 @@ extension Int {
         return Formatter.withSeparator.string(for: self) ?? ""
     }
 }
-
-extension String {
-
-    func removeCharacters(from forbiddenChars: CharacterSet) -> String {
-        let passed = self.unicodeScalars.filter { !forbiddenChars.contains($0) }
-        return String(String.UnicodeScalarView(passed))
-    }
-}

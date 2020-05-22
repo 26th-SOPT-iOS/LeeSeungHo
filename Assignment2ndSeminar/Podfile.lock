@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.8.2)
+  - BEMCheckBox (1.4.1)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
+  - BEMCheckBox
+  - Kingfisher (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BEMCheckBox
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+
+PODFILE CHECKSUM: 296be7b75b8c58cb1454e31b036f9699ecaf788c
+
+COCOAPODS: 1.8.4

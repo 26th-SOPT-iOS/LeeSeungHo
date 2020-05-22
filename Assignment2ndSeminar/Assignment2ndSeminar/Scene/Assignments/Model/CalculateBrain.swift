@@ -56,9 +56,7 @@ class CalculateBrain {
     }
     private var pending: PendingBinaryOperationInfo?
     private func executePendingBinaryOperation() {
-      
-        // 그냥 firstOperand나 상수로 배달해주면 안되나,,,,
-        
+              
         if pending != nil {
             accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
         }
@@ -102,6 +100,5 @@ class CalculateBrain {
             return accumulator
         }
     }
-    
-    
 }
+

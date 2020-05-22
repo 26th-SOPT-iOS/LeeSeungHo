@@ -19,8 +19,8 @@ class ProfileCell: UITableViewCell {
         super.awakeFromNib()
         
         setImageRound(profileImage, section: 10)
+//        updateLayout()
     }
-    
     
     func setImageRound(_ image: UIImageView, section: CGFloat) {
             
@@ -32,15 +32,21 @@ class ProfileCell: UITableViewCell {
     }
     
     func settings(_ profileSettings: Friends) {
+        
         profileImage.image = profileSettings.profileImage
         nameLabel.text = profileSettings.name
         statusLabel.text = profileSettings.subTitle
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    override func prepareForReuse() {
+        super.prepareForReuse()
         
-        // Configure the view for the selected state
+        profileImage.image = nil
+        nameLabel.text = nil
+        statusLabel.text = nil
     }
     
+    func updateLayout() {
+        
+    }
 }

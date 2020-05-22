@@ -32,15 +32,16 @@
 ```swift
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as? ProfileCell  else { return UITableViewCell() }
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as? ProfileCell else { return UITableViewCell() }
 
     if indexPath.section == 0 {
-        cell.settings(friends[0])
+        cell.settings(myProfile[0])
         cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height/2
 
         return cell
     } else {
-        cell.settings(friends[indexPath.item+1])
+        cell.settings(friends[indexPath.item])
+        cell.underBar.alpha = 0
 
         return cell
     }
@@ -68,7 +69,7 @@ func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) ->
 > **⭕️ Tips**<br>
 > Q. tableView의 Delegate, Datasource에는 어떤 것이 있는지 어떻게 알아서 쓰느냐? <br>
 > A. 기본적으로 많이 해보는 방법이 필요합니다. 다만, 필요한 함수 대부분은 Delegate와 DataSource에 정의가 되어 있다는것을 기억하셔야 합니다. 찾아서 써야 해요!<br><br>
-> A. 자동완성을 적극적으로 활용합시다! `func table~` 정도만 타아핑 한 후 원하는 함수를 검색할 수 있습니다! <br>
+> A. 자동완성을 적극적으로 활용합시다! `func table~` 정도만 타이핑 한 후 원하는 함수를 검색할 수 있습니다! <br>
 > 키워드를 생각하며 자동완성 예 : </br> <img src="../Screenshots/AutomaticCompletion.gif" width="100%" height="100%"> <br>
 > 또한 애플 공식문서 > https://developer.apple.com/documentation 에 상세히 기재되어 있습니다! 파파고와 함께 하세요~!
 
@@ -120,7 +121,7 @@ UIView를 이용하여 만들거나, 코드로 만들어 주어야 합니다.
     }
 ```
 
-함수명에서 알수있듯 *각 Section의 Header를 위한 View*라는 것을 알 수 있고, `UIView`를 리턴하는 함수입니다.
+함수명에서 알수 있듯 *각 Section의 Header를 위한 View*라는 것을 알 수 있고, `UIView`를 리턴하는 함수입니다.
 
 1. `view`의 사이즈를 설정해줍니다.
 2. `numberOfFriendLabel`은 친구의 숫자입니다. `friends`배열의 숫자 -1(MyProfile) 만큼을 가지게 됩니다.
@@ -166,10 +167,8 @@ UIView를 이용하여 만들거나, 코드로 만들어 주어야 합니다.
 
 ## **✏️ 3차 도전 과제 ✏️**
 
-필요한 것 :
-(1) `UIAlertController()`,
-(2) `func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) { }`
+필요한 것 : <br>
+(1) `UIAlertController()` <br>
+(2) `func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)`
 
 #### (1) `UIAlertController()`
-
-아래에서 토글되며 나타나는 액션입니다.
