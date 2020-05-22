@@ -76,7 +76,7 @@ Delegate는 다음과 같은 특징을 가지고 있습니다.
 - `protocol`로 구현할 것
 - 대신 처리하는 객체 - A, 처리를 시키는 객체 B 두 객체로 구성
 
-내용이 조금 어려울 수 있으나, **A**는 하청을 받는 객체, **_B_** 는 하청을 시키는 객체! <br>
+내용이 조금 어려울 수 있으나, **A**는 하청을 받는 객체, **_B_** 는 하청을 시키는 객체!간의 관계라는 점!<br>
 
 <img src="../Screenshots/viewControllerA.png" width="40%" height="40%"> <img src="../Screenshots/viewControllerB.png" width="40%" height="40%">
 
